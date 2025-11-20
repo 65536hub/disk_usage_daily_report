@@ -35,9 +35,9 @@
 
 ## 3. スクリプト構成
 
-- disk_usage_daily_report.sh # 本体スクリプト
-- /data/storage/ # 対象ディレクトリ（例）
-- /data/storage/monitoring/ # 差分リスト保存先
+- disk_usage_daily_report.sh  # 本体スクリプト
+- /data/storage/              # 対象ディレクトリ（例）
+- /data/storage/monitoring/   # 差分リスト保存先
 
 ## 4. 処理の流れ
 
@@ -62,7 +62,7 @@ bash disk_check.sh
 - MAIL_TO で指定した宛先に、出力結果がメール本文として送信されます。
 - 取得したディレクトリの使用量を、使用量の大きい順に並べて表示します。
 - 前回との差分（増減） を表示します。増加は +、減少は - で表記します。
-- 1GB未満のディレクトリは 0.00GB として表示されます。
+- 10MB未満のディレクトリは 0.00GB として表示されます。
 
 ```
 例)
