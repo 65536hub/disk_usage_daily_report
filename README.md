@@ -35,9 +35,9 @@
 
 ## 3. スクリプト構成
 
-disk_usage_daily_report.sh # 本体スクリプト
-/data/storage/ # 対象ディレクトリ（例）
-/data/storage/monitoring/ # 差分リスト保存先
+- disk_usage_daily_report.sh # 本体スクリプト
+- /data/storage/ # 対象ディレクトリ（例）
+- /data/storage/monitoring/ # 差分リスト保存先
 
 ## 4. 処理の流れ
 
@@ -55,6 +55,7 @@ disk_usage_daily_report.sh # 本体スクリプト
 bash disk_check.sh
 
 ・cronで自動実行する場合(推奨)
+
 0 2 * * * /usr/local/bin/disk_check.sh
 
 ## 6. 出力例
