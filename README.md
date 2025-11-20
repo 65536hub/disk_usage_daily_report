@@ -63,7 +63,7 @@ bash disk_check.sh
 ・前回との差分（増減） を表示します。増加は +、減少は - で表記します。
 ・1GB未満のディレクトリは 0.00GB として表示されます。
 
------------------------------------------------------
+```
 739.33GB project_build                   -0.53GB
 356.72GB team_data                       
 238.51GB project_sales                   +1.12GB
@@ -73,5 +73,5 @@ bash disk_check.sh
 6.78GB   hr_archive                                                          
 0.00GB   cloud_documents                 
 0.00GB   research_data
------------------------------------------------------
+```
 
