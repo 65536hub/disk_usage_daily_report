@@ -34,7 +34,7 @@ fi
 # 1GB以上のデータを抽出
 du -sk * 2>/dev/null | sort -rn | awk '{ printf "%.2f\t%s\n", $1/1024/1024, $2 }' > "${TOTAL_LIST_DIR}${TOTAL_LIST_TODAY}"
 
-#本日と昨日のサイズを比較する
+#本日と昨日のサイズを比較する関数目を定義
 function DIFF_RESULT () {
 awk '
 FNR==NR {
@@ -81,6 +81,7 @@ echo "."
 sleep 1
 echo "QUIT"
 ) | telnet "${SMTP_SERVER}" 25
+
 
 
 
