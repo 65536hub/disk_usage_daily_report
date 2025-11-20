@@ -70,7 +70,7 @@ echo "RCPT TO:<${MAIL_TO}>"
 sleep 1
 echo "DATA"
 sleep 1
-echo "Subject: [Daily Report] Disk Size Check $(date +%Y%m%d)"
+echo "Subject: [Daily Report] disk_usage_daily_report $(date +%Y%m%d)"
 echo "From: ${MAIL_FROM}"
 echo "To: ${MAIL_TO}"
 echo
@@ -81,4 +81,5 @@ echo "."
 sleep 1
 echo "QUIT"
 ) | telnet "${SMTP_SERVER}" 25
+
 
