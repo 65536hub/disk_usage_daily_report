@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 # 環境設定
 LANG=C
 
@@ -82,3 +81,4 @@ echo "."
 sleep 1
 echo "QUIT"
 ) | telnet "${SMTP_SERVER}" 25
+
