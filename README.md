@@ -64,6 +64,8 @@ bash disk_check.sh
 - 1GB未満のディレクトリは 0.00GB として表示されます。
 
 ```
+例)
+
 739.33GB project_build                   -0.53GB
 356.72GB team_data                       
 238.51GB project_sales                   +1.12GB
