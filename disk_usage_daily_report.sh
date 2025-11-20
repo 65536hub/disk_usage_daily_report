@@ -7,13 +7,13 @@ LANG=C
 set -eU
 
 ###----------------------------------------------------------
-# Target directories (masked for portfolio)
+# 対象ディレクトリ（ポートフォリオ用にマスク済み）
 TOTAL_DIR="/data/storage/"
 TOTAL_LIST_DIR="/data/storage/monitoring/daily_report/"
 TOTAL_LIST_TODAY="Data_Size_$(date +%Y%m%d).txt"
 TOTAL_LIST_YESTERDAY="Data_Size_$(date -d '1 day ago' +%Y%m%d).txt"
 
-# Mail settings (dummy addresses for portfolio use)
+# メール設定（ポートフォリオ用ダミーアドレス）
 MAIL_FROM="noreply@example.com"
 MAIL_TO="admin@example.com"
 SMTP_SERVER="smtp.example.com"
@@ -21,12 +21,12 @@ SMTP_SERVER="smtp.example.com"
 
 cd "${TOTAL_DIR}"
 
-# Create yesterday's file if not exists
+# 存在しない場合、昨日のファイルを作成
 if [ ! -f "${TOTAL_LIST_DIR}${TOTAL_LIST_YESTERDAY}" ]; then
         touch "${TOTAL_LIST_DIR}${TOTAL_LIST_YESTERDAY}"
 fi
 
-# If today's file exists, rotate it
+# 今日のファイルが存在する場合、ローテーションする
 if [ -f "${TOTAL_LIST_DIR}${TOTAL_LIST_TODAY}" ]; then
         mv -f "${TOTAL_LIST_DIR}${TOTAL_LIST_TODAY}" "${TOTAL_LIST_DIR}${TOTAL_LIST_YESTERDAY}"
 fi
@@ -81,5 +81,6 @@ echo "."
 sleep 1
 echo "QUIT"
 ) | telnet "${SMTP_SERVER}" 25
+
 
 
